@@ -58,7 +58,7 @@
   tail \-n 5 /etc/group  
 * **Explicació:** S'utilitza la comanda groupadd per crear grups nous al sistema. Posteriorment, amb tail \-n 5 /etc/group es comprova la creació consultant les últimes 5 línies del fitxer /etc/group.  
 * **Captura de pantalla:**  
-  ![][image1]  
+  ![Captura 1](img/cap1.png) 
 * **Comprovació i GIDs identificats:**  
   * **GID del grup devs:** 1002  
   * **GID del grup sysadmin:** 1003  
@@ -82,9 +82,9 @@
 * **Explicació:** Les modificacions fetes a /etc/skel es copien automàticament al directori personal de cada nou usuari en crear-se. Es comprova el funcionament amb l'usuari prova01 i finalment s'elimina.  
 * **Captura de pantalla:**
 
-![][image2]![][image3]
-
-![][image4]
+![Captura 2-1](img/cap2-1.png)
+![Captura 2-2](img/cap2-2.png)
+![Captura 2-3](img/cap2-3.png)
 
 * **Comprovació:** S'ha comprovat que l'usuari prova01 ha rebut la carpeta Documents, el fitxer benvinguda.txt i que l'àlies ll s'executa correctament.  
 * **Tasca 3\. Creació i configuració d'usuaris**  
@@ -103,9 +103,8 @@
 * **Explicació:** S'utilitza adduser per als usuaris estàndard i useradd per a creacions avançades amb múltiples grups. Amb chage \-d 0 s'obliga a pau\_dev a canviar la contrasenya immediatament.D  
 * **Captura de pantalla:**
 
-![][image5]
-
-![][image6]
+![Captura 3-1](img/cap3-1.png)
+![Captura 3-2](img/cap3-2.png)
 
 * **Comprovació:** En iniciar sessió com a pau\_dev, el sistema ha demanat obligatòriament el canvi de contrasenya abans de permetre accedir-hi.
 
@@ -127,7 +126,7 @@
   ls \-l /etc/shadow  
 * **Captura de pantalla:**
 
-![][image7]
+![Captura 4-1](img/cap4-1.png)
 
 * **Respostes a les preguntes teòriques:**  
   1. **Informació de marc\_sys (id marc\_sys):**  
@@ -166,7 +165,7 @@
 * **Explicació:** La comanda usermod \-L afegeix un signe d'exclamació \! al hash de la contrasenya a /etc/shadow, invalidant l'accés. L'opció \-U el desbloqueja. La comanda deluser \--remove-home esborra l'usuari i la seva carpeta d'inici de forma neta.  
 * **Captura de pantalla:**
 
-![][image8]
+![Captura 5-1](img/cap5-1.png)
 
 * **Comprovació:** S'ha comprovat la presència del signe \! a /etc/shadow durant el bloqueig i la posterior eliminació de l'usuari auditor.
 
@@ -207,7 +206,7 @@
 * **Explicació:** Amb usermod \-s es canvia el shell assignat a l'usuari dins de /etc/passwd.  
 * **Captura de pantalla:**
 
-![][image9]
+![Captura 6-1](img/cap6-1.png)
 
 * **Comprovació:** S'ha verificat a /etc/passwd que laura\_dev té /usr/bin/fish i en iniciar sessió s'ha vist el prompt interactiu de la nova shell.
 
